@@ -26,10 +26,11 @@ var models = [
         scale: '0.5 0.5 0.5',
         info: 'Magnemite, Lv. 5, HP 10/10',
         rotation: '0 180 0',
+        position: '-9, 1.5, 6'
     },
     {
         url: './assets/articuno/scene.gltf',
-        scale: '0.2 0.2 0.2',
+        scale: '0.5 0.5 0.5',
         rotation: '0 180 0',
         info: 'Articuno, Lv. 80, HP 100/100',
     },
@@ -60,15 +61,14 @@ var setModel = function (model, entity) {
     const div = document.querySelector('.instructions');
     div.innerText = model.info;
 };
-alert(1);
+
 function renderPlaces(places) {
     let scene = document.querySelector('a-scene');
 
     places.forEach((place) => {
         let latitude = place.location.lat;
         let longitude = place.location.lng;
-alert(latitude);
-alert(longitude);
+
         let model = document.createElement('a-entity');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
 
