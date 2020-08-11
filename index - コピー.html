@@ -1,0 +1,20 @@
+<!doctype HTML>
+<html>
+	<head>
+		<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+	</head>
+	<body style="margin : 0px; overflow: hidden">
+		<a-scene
+			embedded arjs="debugUIEnabled: false"
+			vr-mode-ui="enabled: false">
+			
+			<a-marker type="pattern" url="pattern-marker.patt">
+				<a-entity
+					gltf-model='assets/magnemite/scene.gltf'>
+			</a-marker>
+			
+			<a-entity camera></a-entity>
+		</a-scene>
+	</body>
+</html>
