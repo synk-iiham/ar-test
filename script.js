@@ -1,7 +1,7 @@
 
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
-    button.innerText = '﹖';
+    button.innerText = '・阀';
 
     let places = staticLoadPlaces();
     renderPlaces(places);
@@ -10,7 +10,7 @@ window.onload = () => {
 function staticLoadPlaces() {
     return [
         {
-            name: 'Pokèmon',
+            name: 'Pokemon',
             location: {
                 // decomment the following and add coordinates:
                 // lat: <your-latitude>,
@@ -67,7 +67,8 @@ function renderPlaces(places) {
     places.forEach((place) => {
         let latitude = place.location.lat;
         let longitude = place.location.lng;
-
+alert(latitude)
+alert(longitude)
         let model = document.createElement('a-entity');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
 
